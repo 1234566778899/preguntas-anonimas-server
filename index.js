@@ -4,7 +4,7 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: ['http://localhost:3000', 'https://preguntas-anonimas.vercel.app', 'http://192.168.18.8:3000'],
+    origin: ['http://localhost:3000', 'https://preguntas-anonimas-web.vercel.app', 'http://192.168.18.8:3000'],
     credentials: true,
     methods: ['GET', 'POST'],
   },
@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.json({
-    nombre: 'Preguntas Anónimas API v2.0',
+    nombre: 'Preguntas Anónimas API v3.0',
     version: '2.0.0',
     salasActivas: salas.size,
   });
