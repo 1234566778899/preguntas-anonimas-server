@@ -7,7 +7,7 @@ const io = require('socket.io')(server, {
     origin: [
       process.env.FRONTEND_URL || 'http://localhost:3000',
       'http://localhost:3000',
-      'https://preguntas-anonimas.vercel.app',
+      'https://preguntas-anonimas-web.vercel.app',
     ],
     credentials: true,
     methods: ['GET', 'POST'],
@@ -27,8 +27,8 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.json({
-    nombre: 'Preguntas Anónimas API v2.0',
-    version: '2.0.0',
+    nombre: 'Preguntas Anónimas API v3.0',
+    version: '3.0.0',
     salasActivas: salas.size,
     totalUsuarios: Array.from(salas.values()).reduce(
       (sum, sala) => sum + sala.users.length,
