@@ -14,6 +14,7 @@ const io = require('socket.io')(server, {
   },
 });
 
+
 // SOLO IMPORTAR HANDLERS
 const registrarEventosSala = require('./handlers/salaHandlers');
 const registrarEventosPreguntas = require('./handlers/preguntaHandlers');
